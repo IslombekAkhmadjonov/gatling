@@ -18,6 +18,7 @@
     <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
     <scala-maven-plugin.version>4.8.1</scala-maven-plugin.version>
   </properties>
+
   <dependencies>
     <dependency>
       <groupId>io.gatling.highcharts</groupId>
@@ -25,22 +26,8 @@
       <version>${gatling.version}</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>io.gatling.highcharts</groupId>
-      <artifactId>gatling-charts-highcharts</artifactId>
-      <version>3.3.1</version>
-    </dependency>
-    <dependency>
-      <groupId>io.gatling</groupId>
-      <artifactId>gatling-app</artifactId>
-      <version>3.3.1</version>
-    </dependency>
-    <dependency>
-      <groupId>io.gatling</groupId>
-      <artifactId>gatling-recorder</artifactId>
-      <version>3.3.1</version>
-    </dependency>
   </dependencies>
+
   <build>
     <testSourceDirectory>src/test/scala</testSourceDirectory>
     <plugins>
@@ -90,14 +77,6 @@
         <configuration>
           <!-- Enterprise Cloud (https://cloud.gatling.io/) configuration reference: https://gatling.io/docs/gatling/reference/current/extensions/maven_plugin/#working-with-gatling-enterprise-cloud -->
           <!-- Enterprise Self-Hosted configuration reference: https://gatling.io/docs/gatling/reference/current/extensions/maven_plugin/#working-with-gatling-enterprise-self-hosted -->
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>io.gatling</groupId>
-        <artifactId>gatling-maven-plugin</artifactId>
-        <version>3.0.5</version>
-        <configuration>
-          <simulationClass>org.baeldung.PerfTestSimulation</simulationClass>
         </configuration>
       </plugin>
     </plugins>
